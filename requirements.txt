@@ -1,0 +1,7 @@
+Django>=4.2
+djangorestframework
+mysqlclient
+drf-yasg
+gunicorn
+python-dotenv
+django-cors-headers

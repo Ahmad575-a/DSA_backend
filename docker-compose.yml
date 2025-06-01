@@ -1,0 +1,32 @@
+services:
+  db:
+    image: mysql:8
+    container_name: dsa_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: dsa_db
+      MYSQL_USER: dsa_user
+      MYSQL_PASSWORD: dsa_pass
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+
+  web:
+    build: .
+    container_name: dsa_web
+    restart: always
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      - db
+
+volumes:
+  dbdata:
+
