@@ -1,6 +1,6 @@
 # DSA Heldenverwaltungssystem
 
-Ein webbasiertes System zur Verwaltung von DSA-Helden. Dieses Projekt ist Teil der Ausbildungsaufgabe für Fachinformatiker Anwendungsentwicklung.
+Ein webbasiertes System zur Verwaltung von DSA-Helden. 
 
 ---
 
